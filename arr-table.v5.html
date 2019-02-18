@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="arr-table.v4.css" />
+</head>
+<body>
+
+<div id="update"></div>
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Добавить автомобиль</button>
+
+<div id="myModal" class="modal">  <!-- The first Modal -->
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>Добавление автомобиля в реестр</h3>
+<form id="mod">
+<table>
+	<tr><td>Модель машины</td> 
+		<td><input id="model" type="text" name="model"/></td></tr>
+	<tr><td>Номер машины</td> 
+		<td><input id="number" type="text" name="number"/></td></tr>
+	<tr><td>Цвет машины</td> 
+		<td><input id="color" type="text" name="color"/></td></tr>
+	<tr><td><input type="submit" value="Внести изменения" onclick="addCar()"/></td></tr>
+	</table>
+</form>
+    </div>
+</div>
+
+<div id="myModal1" class="modal">  <!-- second Modal button -->
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close1">&times;</span>
+    <h3>Редактирование автомобиля</h3>
+<form id="modEdit">
+<table>
+	<tr><td>Модель машины</td> 
+		<td><input id="model1" type="text" name="model1"/></td></tr>
+	<tr><td>Номер машины</td> 
+		<td><input id="number1" type="text" name="number1"/></td></tr>
+	<tr><td>Цвет машины</td> 
+		<td><input id="color1" type="text" name="color1"/></td></tr>
+	<tr><td><input type="submit" value="Сохранить изменения" onclick="saveCar()"/></td></tr>
+	</table>
+</form>
+    </div>
+</div>
+
+<div id='listTable'></div>
+
+<button id="paginat" onclick='prevPage()'>PREV</button>Current page<button onclick='nextPage()'>NEXT</button>
+
+<script src="arr-table.v5.js"></script>
+</body>
+</html>
